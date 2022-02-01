@@ -207,3 +207,22 @@ FFaker::Address.city #=> "Camelot"
 ### Porque ela pode melhorar nossos testes?
 
 Porque ela evita que criemos testes viciados, ou seja, que só funcionam com determinados valores de variávies.
+
+## O que é a Gem Factory Bot?
+
+Uma ferramenta para manipularmos records de forma organizada nos testes.
+
+- Exemplo:
+
+```ruby
+FactoryBot.define do
+    factory :weapon do
+        name { 'excalibur' }
+        kind { :sword }
+    end
+end
+```
+
+### Porque ela pode melhorar nossos testes?
+
+- Porque nós conseguimos organizar melhor a gestão dos nossos records e passamos a escrever menos códigos repetidos (DRY).
