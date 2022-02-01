@@ -262,3 +262,39 @@ module Helpers
     end
 end
 ```
+
+## O que é o let?
+
+Let é uma maneira de definir métodos/variáveis nos nossos testes que só carrega o valor quando é utilizado, e depois do primeiro uso mantém um cache do valor durante todo o teste.
+
+- Exemplo:
+
+```ruby
+RSpec.describe Hero do
+    let(:hero) { Hero.new }
+
+    it 'has a sword' do
+        expect(hero.weapon).to eq('sword')
+    end
+end
+```
+
+## O que são hooks
+
+São métodos que permitem a execução de códigos antes ou depois dos testes.
+
+- Exemplo:
+
+```ruby
+RSpec.describe Hero do
+    let(:hero) { Hero.new }
+
+    before(:each) do
+        hero.update(weapon: 'axe')
+    end
+
+    it 'has an axe' do
+        expect(hero.weapon).to eq('axe')
+    end
+end
+```
