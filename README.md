@@ -160,3 +160,25 @@ expect { ... }.to raise_error(ErrorClass, "message")
 - Arquivo que carrega as dependencias do Rails e faz as configurações necessárias para que o Rspec rode em conjunto com ele.
 - Exemplo de configuração
   - config.use_transactional_fixtures = true
+
+## Generators no Rspec-Rails
+
+Scripts que geram arquivos de testes com a estrutura básica pronta para que você possa criar seus testes facilmente
+
+- Gerando um model com teste
+
+```ruby
+rails generate model user
+```
+
+- Gerando um teste de request
+
+```ruby
+rails generate rspec:request User
+```
+
+- Conhecendo todas as opções
+
+```ruby
+rails generate --help | grep rspec
+```
