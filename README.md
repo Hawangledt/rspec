@@ -226,3 +226,23 @@ end
 ### Porque ela pode melhorar nossos testes?
 
 - Porque nós conseguimos organizar melhor a gestão dos nossos records e passamos a escrever menos códigos repetidos (DRY).
+
+## O que são teste de request?
+
+São testes de integração (ou seja, que testam vários componentes ao mesmo tempo) que realiza uma request completa para um endpoint do seu projeto e verifica se ele está respondendo adequadamente.
+
+- Exemplo:
+
+```ruby
+describe "GET /home" do
+    it "has the message 'Hello World'" do
+        get home_path
+        expect(response.body).to include("Hello World")
+    end
+end
+```
+
+### Porque usar testes de request?
+
+- Para garantir que o seu endpoint está devolvendo o status code e a resposta esperada para ele.
+- Para garantir que a integração entre os diversos elementos (model, controller, rota e etc) necessários para a resposta do endpoint estão funcionando adequadamente juntos.
