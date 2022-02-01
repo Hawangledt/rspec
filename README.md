@@ -191,3 +191,19 @@ Testar os models ajuda a garantir que a estrutura de dados esteja correta.
 
 - Quando testar?
   - Em geral quando existem validações customizadas.
+
+## O que é a Gem FFaker?
+
+Uma gem que permite gerar valores aleatórios
+
+- Exemplos:
+
+```ruby
+FFaker::Name.name #=> "Green wizard"
+FFaker::Internet.email #=> "green@wizard.com"
+FFaker::Address.city #=> "Camelot"
+```
+
+### Porque ela pode melhorar nossos testes?
+
+Porque ela evita que criemos testes viciados, ou seja, que só funcionam com determinados valores de variávies.
