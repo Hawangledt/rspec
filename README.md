@@ -246,3 +246,19 @@ end
 
 - Para garantir que o seu endpoint está devolvendo o status code e a resposta esperada para ele.
 - Para garantir que a integração entre os diversos elementos (model, controller, rota e etc) necessários para a resposta do endpoint estão funcionando adequadamente juntos.
+
+## O que é um helper do Rspec?
+
+Métodos que podem ser reaproveitados ao longo dos testes.
+
+- Exemplo:
+
+```ruby
+module Helpers
+    module Authentication
+        def sign_in_as(user)
+            # Códigos para estabelecer o sign_in
+        end
+    end
+end
+```
