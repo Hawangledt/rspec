@@ -167,18 +167,27 @@ Scripts que geram arquivos de testes com a estrutura básica pronta para que voc
 
 - Gerando um model com teste
 
-```ruby
+```terminal
 rails generate model user
 ```
 
 - Gerando um teste de request
 
-```ruby
+```terminal
 rails generate rspec:request User
 ```
 
 - Conhecendo todas as opções
 
-```ruby
+```terminal
 rails generate --help | grep rspec
 ```
+
+## O que são models?
+
+São classes Ruby que se conectam às tabelas no banco de dados para permitir uma fácil manipulação delas.
+
+Testar os models ajuda a garantir que a estrutura de dados esteja correta.
+
+- Quando testar?
+  - Em geral quando existem validações customizadas.
