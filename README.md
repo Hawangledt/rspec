@@ -148,3 +148,15 @@ expect { ... }.to raise_error("message")
 # Passa se a chamada levantar um erro do tipo ErrorClass com a mensagem "message"
 expect { ... }.to raise_error(ErrorClass, "message")
 ```
+
+## spec_helper.rb
+
+- Ele é o arquivo base de configuração do Rspec
+- Exemplo de configuração
+  - config.order = :random
+
+## rails_helper.rb
+
+- Arquivo que carrega as dependencias do Rails e faz as configurações necessárias para que o Rspec rode em conjunto com ele.
+- Exemplo de configuração
+  - config.use_transactional_fixtures = true
